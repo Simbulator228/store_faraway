@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Добавление продукта</title>
+{% endblock %}
+{% block body %}
+    {% for msg in get_flashed_messages() %}
+        <div class="flash">{{ msg }}</div>
+    {% endfor %}
+
+
+    <form action="/add_product" method="post">
+        <h1>Заходь</h1>
+        <label class="sign-in-form__label">Цена:
+            <input type="text" name="price" placeholder='100000000$' required>
+        </label>
+        <label class="sign-in-form__label">Название:
+            <input type="text" name="name" placeholder="Попсик" required>
+        </label>
+        <br>
+        <label class="sign-in-form__label">Информация:
+            <textarea  name="info" required></textarea>
+        </label>
+        <br>
+        <label class="sign-in-form__label">Рейтинг:
+            <input type="text" name="rating" required>
+        </label>
+        <br>
+        <label class="sign-in-form__label">Картиночка:
+            <input type="text" name="img" required>
+        </label>
+        <br>
+        <input type="submit" value="Добавление товара"><br>
+    </form>
+{% endblock %}

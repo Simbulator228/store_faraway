@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>{{ tittle }}</title>
+{% endblock %}
+{% block body %}
+<div class="product-item">
+          <img src="{{ product[5] }}">
+          <div class="product-list">
+              <a href="/product/{{ product[0]}}">
+              <h3>{{ product[2] }}</h3>
+              <h3>Rating:{{ product[4] }}</h3>
+              <h3>Обо мне: {{ product[3] }}</h3>
+              <span class="price">{{ product[1] }}$</span>
+              <form action="/add_wishlist" method="POST">
+                    <input type="hidden" name="product" value="{{ product[0] }}">
+                    <input type="submit" value="В избранное">
+              </form>
+
+              <a href="/" class="button">В корзину</a>
+          </div>
+        </div>
+{% endblock %}
+

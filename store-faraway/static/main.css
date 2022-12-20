@@ -1,0 +1,142 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: "Arial Black", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    background-color: #fff;
+}
+
+img{
+    max-width: 100% ;
+    height: auto;
+}
+
+section{
+    padding: 50px 0;
+}
+
+a{
+    color:#111;
+}
+
+a:hover{
+    color:#999;
+}
+
+input {
+    height: 30px;
+    padding: 7px;
+}
+
+/*Header*/
+.navbar{
+   background-color: #383535;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color:#999;
+    font-weight: lighter;
+}
+
+.navbar-brand{
+    color:#111;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.dropdown-toggle{
+    background: transparent;
+    font-size: 16px;
+    height: 34px;
+    -webkit-appearance: none;
+}
+
+.nav-link.dropdown-toggle::after{
+    display:none;
+}
+
+.navbar-nav .dropdown-menu{
+    right: 0;
+    left: auto;
+}
+
+.check-in{
+    padding: 5px;
+    margin: auto;
+}
+/*Header*/
+
+
+.carousel-item{
+    height: 600px;
+}
+
+.carousel-item img{
+    height: 600px;
+}
+
+* {
+   box-sizing: border-box;
+}
+.product-item {
+   width: 300px;
+   text-align: center;
+   margin: 0 auto;
+   border-bottom: 2px solid #F5F5F5;
+   background: white;
+   font-family: "Open Sans";
+   transition: .3s ease-in;
+}
+.product-item:hover {
+   border-bottom: 2px solid #fc5a5a;
+}
+.product-item img {
+   display: block;
+   width: 100%;
+}
+.product-list {
+   background: #fafafa;
+   padding: 15px 0;
+}
+.product-list h3 {
+   font-size: 18px;
+   font-weight: 400;
+   color: #444444;
+   margin: 0 0 10px 0;
+}
+.price {
+   font-size: 16px;
+   color: #fc5a5a;
+   display: block;
+   margin-bottom: 12px;
+}
+.button {
+   text-decoration: none;
+   display: inline-block;
+   padding: 0 12px;
+   background: #cccccc;
+   color: white;
+   text-transform: uppercase;
+   font-size: 12px;
+   line-height: 28px;
+   transition: .3s ease-in;
+}
+.product-item:hover .button {
+   background: #fc5a5a;
+}
+
+.image-radius {
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 2px 1px 5px #999999;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.sign-in-form__label {
+    font-size: medium;
+}
+

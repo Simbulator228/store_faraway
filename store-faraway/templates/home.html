@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Главная страница</title>
+{% endblock %}
+{% block body %}
+    <main>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://sun9-42.userapi.com/impg/JD30WpFemrioG7BAhqxH8x3YSvtF1SYc6N221w/x3fJHuLf7a8.jpg?size=1219x964&quality=96&sign=b32431befdb25d99f25e63d8a559aef5&type=album"
+                     class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="https://sun9-46.userapi.com/impg/q1ELibxaxgFxrFhIf87qmGC46gCMVTAP7QBUCA/ul8q6v9Hpw4.jpg?size=1242x1290&quality=95&sign=759d6aa5790829e36a359d3647d7c0f7&type=album"
+                     class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl4Vw3SvVj1djDcodtEgw8mQTOJI0dglYrA&usqp=CAU"
+                     class="d-block w-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div>
+    {% for product in products %}
+         <div class="product-item">
+          <img src="{{ product[5] }} class='image-radius'">
+          <div class="product-list" >
+              <a href="/product/{{ product[0]}}">
+              <h3>{{ product[2] }}</h3>
+              <h3>Rating:{{ product[4] }}</h3>
+              <h3>Обо мне: {{ product[3] }}</h3>
+              <span class="price">{{ product[1] }}$</span>
+              <a href="/" class="button">В корзину</a>
+          </div>
+        </div>
+        {% endfor %}
+</main>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Регистрация</title>
+{% endblock %}
+{% block body %}
+    {% for msg in get_flashed_messages() %}
+        <div class="flash">{{ msg }}</div>
+    {% endfor %}
+
+
+    <form action="/registration" method="post">
+        <h1>Заходь</h1>
+        <label class="sign-in-form__label">Имя:
+            <input type="text" name="name" placeholder='Наталья' required>
+        </label>
+        <label class="sign-in-form__label">Фамилия:
+            <input type="text" name="surname" placeholder="Морская Пехота" required>
+        </label>
+        <br>
+        <br>
+        <label class="sign-in-form__label">Логин:
+            <input type="text" name="login" required>
+        </label>
+        <br>
+        <label class="sign-in-form__label">Пароль:
+            <input type="password" name="password" required>
+        </label>
+        <br>
+        <label class="sign-in-form__label">Повторите пароль:
+            <input type="password" name="password2" required>
+        </label>
+        <br>
+        <input type="submit" value="Регистарция"><br>
+        <a href="{{ url_for('login') }}">Войти</a>
+    </form>
+{% endblock %}

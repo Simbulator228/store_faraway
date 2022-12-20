@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+    {% for product in products %}
+         <div class="product-item">
+          <img src="{{ product[5] }} class='image-radius'">
+          <div class="product-list">
+              <a href="/product/{{ product[0]}}">
+              <h3>{{ product[2] }}</h3>
+              <h3>Rating:{{ product[4] }}</h3>
+              <h3>Обо мне: {{ product[3] }}</h3>
+              <span class="price">{{ product[1] }}$</span>
+              <a href="/" class="button">В корзину</a>
+          </div>
+        </div>
+        {% endfor %}
+{% endblock %}
